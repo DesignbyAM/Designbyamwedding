@@ -1,0 +1,308 @@
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5f2;
+    overflow-x:hidden;
+    font-family:Georgia, serif;
+}
+
+/* ===================================
+   ENVELOPE SCREEN
+=================================== */
+
+#envelope-screen{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#f8f5f2;
+
+    z-index:9999;
+
+    overflow:hidden;
+
+    perspective:2200px;
+
+    transition:opacity .6s ease;
+
+}
+
+#envelope-screen.hide{
+
+    opacity:0;
+    pointer-events:none;
+
+}
+
+/* ===================================
+   ENVELOPE
+=================================== */
+
+#envelope{
+
+    position:relative;
+
+    width:min(125vw,1900px);
+
+    aspect-ratio:2000 / 1400;
+
+}
+
+.envelope-body{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    pointer-events:none;
+    user-select:none;
+
+}
+
+.envelope-flap{
+
+    position:absolute;
+
+top:-26px;
+left:0;
+right:0;
+bottom:0;
+    
+
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    cursor:pointer;
+
+    transform-origin:50% 27%;
+
+    transform-style:preserve-3d;
+
+    backface-visibility:hidden;
+
+    transition:transform 6s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.envelope-flap.open{
+
+    transform:rotateX(-175deg);
+
+}
+
+/* ===================================
+   WEBSITE
+=================================== */
+
+#website{
+
+    width:100%;
+
+}
+
+/* ===================================
+   COVER
+=================================== */
+
+#cover{
+
+    width:100%;
+
+}
+
+#cover img{
+
+    width:100%;
+    display:block;
+
+}
+
+/* ===================================
+   INVITATION
+=================================== */
+
+.invitation-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+.invitation-wrapper img{
+
+    width:100%;
+    display:block;
+
+}
+
+/* ===================================
+   COUNTDOWN
+=================================== */
+
+#countdown{
+
+    position:absolute;
+
+    top:77%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:15px;
+
+    z-index:20;
+
+}
+
+.box{
+
+    width:70px;
+    height:70px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:16px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.box span{
+
+    font-size:24px;
+    font-weight:bold;
+    color:#8a6b48;
+
+}
+
+.box small{
+
+    font-size:11px;
+    color:#555;
+    margin-top:4px;
+
+}
+
+/* ===================================
+   LOCATION BUTTON
+=================================== */
+
+#location-button{
+
+    position:absolute;
+
+    top:85%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    background:#a88763;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+#location-button:hover{
+
+    transform:translateX(-50%) scale(1.05);
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width:768px){
+
+    #envelope{
+
+        width:220vw;
+        max-width:none;
+
+        transform:scale(1.15);
+
+    }
+
+    .envelope-body,
+    .envelope-flap{
+
+        width:100%;
+        height:100%;
+
+        object-fit:contain;
+
+    }
+
+    #countdown{
+
+        gap:8px;
+
+    }
+
+    .box{
+
+        width:55px;
+        height:55px;
+
+    }
+
+    .box span{
+
+        font-size:18px;
+
+    }
+
+    .box small{
+
+        font-size:9px;
+
+    }
+
+    #location-button{
+
+        padding:10px 20px;
+        font-size:13px;
+
+    }
+
+}

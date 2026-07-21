@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         MUSIC
+    ========================== -->
+
+    <audio id="music" preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- =========================
+         ENVELOPE
+    ========================== -->
+
+    <section id="envelope-screen">
+
+        <div id="envelope">
+
+            <img
+                src="images/envelope-body.png"
+                class="envelope-body"
+                alt="Envelope Body"
+            >
+
+            <img
+                src="images/envelope-flap.png"
+                class="envelope-flap"
+                id="flap"
+                alt="Envelope Flap"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         WEBSITE
+    ========================== -->
+
+    <main id="website">
+
+        <!-- COVER -->
+
+        <section id="cover">
+
+            <img
+                src="images/cover.jpg"
+                alt="Cover"
+            >
+
+        </section>
+
+        <!-- INVITATION -->
+
+        <section id="invitation">
+
+            <div class="invitation-wrapper">
+
+                <img
+                    src="images/invitation.png"
+                    alt="Invitation"
+                >
+
+                <!-- =========================
+                     COUNTDOWN
+                ========================== -->
+
+                <div id="countdown">
+
+                    <div class="box">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="box">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="box">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="box">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+
+                </div>
+
+                <!-- =========================
+                     LOCATION
+                ========================== -->
+
+                <a
+                    id="location-button"
+                    href="https://maps.app.goo.gl/SdBjhVyaw29UzJ5A6"
+                    target="_blank"
+                >
+                    Get Directions
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
