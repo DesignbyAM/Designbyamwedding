@@ -58,7 +58,7 @@ body{
 
     position:relative;
 
-    width:min(125vw,1900px);
+    width:min(145vw,2200px);
 
     aspect-ratio:2000 / 1400;
 
@@ -256,10 +256,10 @@ bottom:0;
 
     #envelope{
 
-        width:220vw;
+        width:260vw;
         max-width:none;
 
-        transform:scale(1.15);
+        transform:scale(1.35);
 
     }
 
@@ -281,20 +281,20 @@ bottom:0;
 
     .box{
 
-        width:55px;
-        height:55px;
+        width:45px;
+        height:45px;
 
     }
 
     .box span{
 
-        font-size:18px;
+        font-size:14px;
 
     }
 
     .box small{
 
-        font-size:9px;
+        font-size:7px;
 
     }
 
