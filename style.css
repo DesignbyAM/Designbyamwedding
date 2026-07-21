@@ -58,21 +58,22 @@ body{
 
     position:relative;
 
-    width:min(145vw,2200px);
+    width:100vw;
+    height:100vh;
 
-    aspect-ratio:2000 / 1400;
+    transform:scale(1.45);
 
 }
 
 .envelope-body{
 
     position:absolute;
-    inset:0;
+    inset:-8%;
 
-    width:100%;
-    height:100%;
+    width:116%;
+    height:116%;
 
-    object-fit:contain;
+    object-fit:cover;
 
     pointer-events:none;
     user-select:none;
@@ -82,31 +83,23 @@ body{
 .envelope-flap{
 
     position:absolute;
+    inset:-8%;
 
-top:-26px;
-left:0;
-right:0;
-bottom:0;
-    
+    width:116%;
+    height:116%;
 
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
+    object-fit:cover;
 
     cursor:pointer;
 
-    transform-origin:50% 27%;
+    transform-origin:50% 24%;
 
     transform-style:preserve-3d;
-
     backface-visibility:hidden;
 
-    transition:transform 6s cubic-bezier(.22,.61,.36,1);
+    transition:transform 1.8s cubic-bezier(.22,.61,.36,1);
 
 }
-
 .envelope-flap.open{
 
     transform:rotateX(-175deg);
@@ -254,14 +247,7 @@ bottom:0;
 
 @media (max-width:768px){
 
-    #envelope{
-
-        width:260vw;
-        max-width:none;
-
-        transform:scale(1.35);
-
-    }
+   
 
     .envelope-body,
     .envelope-flap{
