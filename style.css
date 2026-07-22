@@ -71,10 +71,10 @@ body{
 
     position:absolute;
 
-    inset:-8%;
+    inset:-10%;
 
-    width:116%;
-    height:116%;
+    width:120%;
+    height:120%;
 
     object-fit:cover;
 
@@ -87,21 +87,21 @@ body{
 
     position:absolute;
 
-    inset:-8%;
+    inset:-10%;
 
-    width:116%;
-    height:116%;
+    width:120%;
+    height:120%;
 
     object-fit:cover;
 
     cursor:pointer;
 
-    transform-origin:50% 24%;
+    transform-origin:50% 23%;
 
     transform-style:preserve-3d;
     backface-visibility:hidden;
 
-    transition:transform 1.8s cubic-bezier(.22,.61,.36,1);
+    transition:transform 2.2s cubic-bezier(.22,.61,.36,1);
 
 }
 
@@ -128,12 +128,14 @@ body{
 #cover{
 
     width:100%;
+    min-height:100vh;
 
 }
 
 #cover img{
 
     display:block;
+
     width:100%;
     height:auto;
 
@@ -179,7 +181,7 @@ body{
     transform:translateX(-50%);
 
     display:flex;
-    gap:10px;
+    gap:8px;
 
     z-index:20;
 
@@ -187,12 +189,12 @@ body{
 
 .box{
 
-    width:60px;
-    height:60px;
+    width:54px;
+    height:54px;
 
     background:rgba(255,255,255,.88);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 
     border-radius:14px;
 
@@ -205,7 +207,7 @@ body{
 
 .box span{
 
-    font-size:20px;
+    font-size:18px;
     font-weight:bold;
     color:#8a6b48;
 
@@ -214,7 +216,7 @@ body{
 .box small{
 
     font-size:9px;
-    color:#555;
+    color:#666;
     margin-top:2px;
 
 }
@@ -234,7 +236,7 @@ body{
 
     padding:12px 28px;
 
-    border-radius:40px;
+    border-radius:50px;
 
     background:#a88763;
 
@@ -243,14 +245,17 @@ body{
     text-decoration:none;
 
     font-size:14px;
+    font-weight:500;
 
-    transition:.3s;
+    transition:.3s ease;
 
 }
 
 #location-button:hover{
 
     transform:translateX(-50%) scale(1.05);
+
+    background:#937553;
 
 }
 /* ===================================
@@ -262,7 +267,10 @@ body{
     html,
     body{
         overflow-x:hidden;
+        width:100%;
     }
+
+    /* ENVELOPE */
 
     #envelope{
 
@@ -273,33 +281,48 @@ body{
         justify-content:center;
         align-items:center;
 
-        transform:scale(0.7);
+        transform:scale(1.75);
 
     }
 
-    .envelope-body,
-    .envelope-flap{
+    .envelope-body{
 
-        inset:-18%;
+        inset:-22%;
 
-        width:136%;
-        height:136%;
+        width:144%;
+        height:144%;
 
         object-fit:cover;
 
     }
 
+    .envelope-flap{
+
+        inset:-22%;
+
+        width:144%;
+        height:144%;
+
+        object-fit:cover;
+
+        transform-origin:50% 22%;
+
+    }
+
+    /* COUNTDOWN */
+
     #countdown{
 
         top:77%;
+
         gap:6px;
 
     }
 
     .box{
 
-        width:42px;
-        height:42px;
+        width:40px;
+        height:40px;
 
         border-radius:10px;
 
@@ -307,23 +330,25 @@ body{
 
     .box span{
 
-        font-size:14px;
+        font-size:13px;
 
     }
 
     .box small{
 
-        font-size:7px;
+        font-size:6px;
 
     }
+
+    /* LOCATION */
 
     #location-button{
 
         top:85%;
 
-        padding:10px 20px;
+        padding:9px 18px;
 
-        font-size:12px;
+        font-size:11px;
 
     }
 
