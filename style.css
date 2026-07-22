@@ -58,7 +58,7 @@ body{
 
     position:relative;
 
-    width:min(125vw,1900px);
+    width:min(145vw,2200px);
 
     aspect-ratio:2000 / 1400;
 
@@ -122,16 +122,20 @@ body{
 #cover{
 
     width:100%;
-    min-height:100vh;
+    line-height:0;
+    margin:0;
+    padding:0;
 
 }
 
 #cover img{
 
     display:block;
-
     width:100%;
     height:auto;
+
+    margin:0;
+    padding:0;
 
 }
 
@@ -274,11 +278,7 @@ body{
 
 }
     
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    transform:none;
+    
 
 }
 
@@ -343,5 +343,3 @@ body{
         font-size:11px;
 
     }
-
-}
