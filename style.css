@@ -61,6 +61,10 @@ body{
     width:180vw;
     max-width:none;
 
+    position:relative;
+    top:-40px;
+
+
     aspect-ratio:2000 / 1400;
 
     display:flex;
